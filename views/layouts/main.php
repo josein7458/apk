@@ -43,6 +43,18 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             ['label' => 'Sobre nosotros', 'url' => ['/site/about']],
             ['label' => 'Contactenos', 'url' => ['/site/contact']],
             ['label' => 'Actores', 'url' => ['/actor/index']],
+            ['label' => 'Directores', 'url' => ['/director/index']],
+            ['label' => 'Generos', 'url' => ['/genero/index']],
+            ['label' => 'Peliculas', 'url' => ['/pelicula/index']],
+            //[
+            //    'label' => 'Gestionar Peliculas',
+            //    'items' => [
+            //        ['label' => 'Peliculas', 'url' => ['/pelicula/index']],
+            //        ['label' => 'Actores', 'url' => ['/actor/index']],
+            //        ['label' => 'Directores', 'url' => ['/director/index']],
+            //        ['label' => 'Generos', 'url' => ['/genero/index']],
+            //    ],
+            //],
             Yii::$app->user->isGuest
                 ? ['label' => 'Iniciar sesion', 'url' => ['/site/login']]
                 : '<li class="nav-item">'
