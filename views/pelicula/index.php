@@ -52,9 +52,28 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Url::toRoute([$action, 'idpelicula' => $model->idpelicula]);
                  }
             ],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{delete}', // Botones disponibles
+                'buttons' => [
+                    'delete' => function ($url, $model) {
+                        return Html::beginForm(['pelicula/delete', 'idpelicula' => $model->idpelicula], 'post', [
+                            'onsubmit' => 'return confirm("¿Estás seguro de que deseas eliminar esta película?");'
+                        ])
+                        . Html::submitButton('<i class="fas fa-trash-alt"></i>', [
+                            'class' => 'btn btn-danger btn-sm',
+                            'title' => 'Eliminar',
+                        ])
+                        . Html::endForm();
+                    },
+                ],
+            ],
         ],
     ]); ?>
+    
+    
 
     <?php Pjax::end(); ?>
 
+    
 </div>

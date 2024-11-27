@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        
     </p>
 
     <?= DetailView::widget([
@@ -45,5 +46,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'fk_iddirector',
         ],
     ]) ?>
+
 
 </div>
